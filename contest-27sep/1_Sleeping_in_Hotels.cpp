@@ -2,6 +2,13 @@
 #include <string>
 using namespace std;
 
+void fast()
+{
+    ios::sync_with_stdio(false);
+    cin.tie();
+    cout.tie(NULL);
+}
+
 int masCercanoIzq(string &linea, int pos)
 {
     int contadorIzq = 0;
@@ -49,13 +56,13 @@ int masCercano(string &linea, int &pos)
 
 int main()
 {
+    fast();
     std::string linea;
     int solucionMax = 0;
     int solucionTemp = 0;
 
     while (cin >> linea)
     {
-        cout << linea << endl;
         for (int i = 0; i < linea.size(); i++)
         {
             if (linea[i] != 'X')
