@@ -9,16 +9,6 @@ void fazt()
     cout.tie(nullptr);
 }
 
-/*
-00 01 02 03 04
-10 11 12 13 14
-20 21 22 23 24
-30 31 32 33 34
-40 41 42 43 44
-
-00 01 02 03 04
-00 10 20 30 40
-*/
 
 string getEstado2(vector<string> & A, vector<string> & B) {
     int n = A.size();
@@ -95,8 +85,6 @@ string getEstado2(vector<string> & A, vector<string> & B) {
 
 
 
-
-
 int main(){
     // fazt();
     int dimension;
@@ -122,8 +110,6 @@ int main(){
 
     return 0;
 }
-
-
 
 
 bool verticalReflection(vector<string> & A, vector<string> & B){
@@ -172,7 +158,7 @@ bool rotated270(vector<string> & A, vector<string> & B){
 }
 bool verticalReflectionAnd90(vector<string> & A, vector<string> & B){
     int n = A.size();
-    vector<string> C(n,"    ");
+    vector<string> C(n);
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             C[i][j] = A[n-i-1][j];  
@@ -182,7 +168,7 @@ bool verticalReflectionAnd90(vector<string> & A, vector<string> & B){
 }
 bool verticalReflectionAnd270(vector<string> & A, vector<string> & B){
     int n = A.size();
-    vector<string> C(n,"    ");
+    vector<string> C(n);
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             C[i][j] = A[n-i-1][j];  
